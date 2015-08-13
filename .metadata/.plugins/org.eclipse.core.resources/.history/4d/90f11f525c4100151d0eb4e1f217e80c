@@ -1,0 +1,29 @@
+<?php
+
+return array(
+	/*
+	 * Configure the route for feed
+	 * Using the literal route
+	 */
+	'router' => array(
+		'routes' => array(
+			'feed' => array(
+				'type' => 'Literal',
+				'options' => array(
+					'route' => '/feed',
+					'defaults' => array(
+						'controller' => '',
+						'action' => 'index'
+					),
+				),
+			),
+		),
+	),
+		
+	'controllers' => array(
+		'invokables' => array(
+			
+		),
+	),
+		
+);

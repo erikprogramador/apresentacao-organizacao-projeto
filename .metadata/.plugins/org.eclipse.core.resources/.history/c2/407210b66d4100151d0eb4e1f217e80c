@@ -1,0 +1,28 @@
+<?php
+
+namespace Application\Service;
+
+use Zend\Feed\Reader\Reader;
+
+class FeedService
+{
+	protected $reader;
+	
+	public function __construct(Reader $reader)
+	{
+		$this->reader = $reader;
+	}
+	
+	public function getFeed($url)
+	{
+		$feed = $this->reader->import($url);
+		foreach($feed as $feedRss) {
+			$rss['itens'] = array(
+				'title' => $feed->getTitle(),
+				'link' => $feed->getLink()
+			);
+		}
+		
+		return $rss; 		
+	}
+}

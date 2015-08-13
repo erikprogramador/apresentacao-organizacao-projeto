@@ -1,0 +1,15 @@
+<?php
+
+namespace EtecFeedReader\Controller;
+
+use Zend\Mvc\Controller\AbstractActionController;
+use Zend\View\Helper\ViewModel;
+
+class FeedController extends AbstractActionController
+{
+	public function indexAction()
+	{
+		var_dump('Ola');
+		return new ViewModel();
+	}	
+}

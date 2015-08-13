@@ -1,0 +1,6 @@
+<h1>Mais lidas Tecmundo!</h1>
+<ul>
+	<?php foreach($this->result as $rss) { ?>
+		<li><a href="<?php echo $rss->getLink() ?>"><?php echo $rss->getTitle() ?></a></li>
+	<?php } ?>
+</ul>

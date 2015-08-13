@@ -1,0 +1,6 @@
+
+<ul>
+	<?php foreach($this->result as $rss) { ?>
+		<li><a href="<?php echo $rss->link ?>"><?php echo $rss->title ?></a></li>
+	<?php } ?>
+</ul>

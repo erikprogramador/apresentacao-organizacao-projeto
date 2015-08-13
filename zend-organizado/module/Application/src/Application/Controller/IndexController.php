@@ -14,10 +14,11 @@ use Zend\View\Model\ViewModel;
 
 class IndexController extends AbstractActionController
 {
-    protected $name;
-
     public function indexAction()
     {
-        return new ViewModel();
+    	$feedService = $this->getServiceLocator()->get("FeedService");
+    	$itens		 = $feedService->getFeed("http://rss.slashdot.org/Slashdot/slashdot");
+    	
+        return new ViewModel(array('itens' => $itens));
     }
 }

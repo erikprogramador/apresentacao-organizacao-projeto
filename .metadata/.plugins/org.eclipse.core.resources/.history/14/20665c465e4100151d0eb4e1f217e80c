@@ -1,0 +1,41 @@
+<?php
+
+return array(
+	/*
+	 * Configure the route for feed
+	 * Using the literal route
+	 */
+	'router' => array(
+		'routes' => array(
+			'feed' => array(
+				'type' => 'Literal',
+				'options' => array(
+					'route' => '/feed',
+					'defaults' => array(
+						'controller' => 'EtecFeedReader\Controller\FeedController',
+						'action' => 'index'
+					),
+				),
+			),
+		),
+	),
+	
+	/*
+	 * Register Controllers for use in the routes
+	 */
+	'controllers' => array(
+		'invokables' => array(
+			'EtecFeedReader\Controller\FeedController' => 'EtecFeedReader\Controller\FeedController'
+		),
+	),
+		
+	/*
+	 * Define path to view
+	 */	
+	'view_manager' => array(
+		'template_path_stack' => array(
+			__DIR__ . '/../view',
+		),
+	),
+		
+);

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;module/Application/src/Application/Services&apos; to &apos;module/Application/src/Application/Service&apos;&#x0A;- Original element: &apos;zend-organizado/module/Application/src/Application/Services&apos;&#x0A;- Renamed element: &apos;zend-organizado/module/Application/src/Application/Service&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings&#x0A;- Rename subpackages of the package" description="Rename package &apos;module/Application/src/Application/Services&apos;" flags="589830" hierarchical="true" id="org.eclipse.dltk.ui.rename.script.folder" input="/&lt;module\/Application\/src\/Application\/Services" name="module/Application/src/Application/Service" qualified="false" references="true" stamp="1439432287646" textual="false" version="1.0"/>
+</session>

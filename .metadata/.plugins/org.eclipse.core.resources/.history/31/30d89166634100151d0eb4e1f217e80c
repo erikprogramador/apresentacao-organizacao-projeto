@@ -1,0 +1,17 @@
+<?php
+
+namespace Application\Factory;
+
+use Zend\ServiceManager\FactoryInterface;
+use Zend\ServiceManager\ServiceLocatorInterface;
+use Zend\Feed\Reader\Reader;
+use Application\Service\FeedService;
+
+class FactoryFeedService implements FactoryInterface
+{
+	public function createService(ServiceLocatorInterface $serviceLocator)
+	{
+		$reader 	 = new Reader();
+		$feedService = new FeedService($reader); 	
+	}
+}
