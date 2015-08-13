@@ -4,15 +4,29 @@ namespace Application\Service;
 
 use Zend\Feed\Reader\Reader;
 
+/**
+ * Make actions relative to feed manipulation
+ * @author erikprogramador
+ *
+ */
 class FeedService
 {
 	protected $reader;
 	
+	/**
+	 * Method construct to class
+	 * @param Reader $reader
+	 */
 	public function __construct(Reader $reader)
 	{
 		$this->reader = $reader;
 	}
 	
+	/**
+	 * Method return once xml response for show in view page
+	 * @param string $url
+	 * @return \Zend\Feed\Reader\Feed\FeedInterface
+	 */
 	public function getFeed($url)
 	{
 		return $this->reader->import($url);		

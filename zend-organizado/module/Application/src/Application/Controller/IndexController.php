@@ -1,19 +1,21 @@
 <?php
-/**
- * Zend Framework (http://framework.zend.com/)
- *
- * @link      http://github.com/zendframework/ZendSkeletonApplication for the canonical source repository
- * @copyright Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
- * @license   http://framework.zend.com/license/new-bsd New BSD License
- */
 
 namespace Application\Controller;
 
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\ViewModel;
 
+/**
+ * Using this controller for manipulate methods to FeedService and send response for feed view
+ * @author erikprogramador
+ *
+ */
 class IndexController extends AbstractActionController
 {
+	/**
+	 * Index action call the FeedService to get feed rss, using geetFeed($url) for get rss
+	 * @see \Zend\Mvc\Controller\AbstractActionController::indexAction()
+	 */
     public function indexAction()
     {
     	$feedService = $this->getServiceLocator()->get("FeedService");
